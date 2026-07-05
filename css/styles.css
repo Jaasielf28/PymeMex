@@ -622,3 +622,311 @@
   p {
   text-align: justify;
 }
+
+/*=================================================
+            EVENTO DESTACADO
+==================================================*/
+
+.event-highlight{
+
+    padding:90px 0;
+
+    background:
+    radial-gradient(circle at top right,#eef8ff 0%,#ffffff 45%);
+
+    overflow:hidden;
+
+}
+
+.event-container{
+
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.event-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:#EAF4FB;
+
+    color:var(--blue);
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+.event-badge i{
+
+    color:var(--sky);
+
+}
+
+.event-info h2{
+
+    font-size:2.4rem;
+
+    line-height:1.15;
+
+    margin-bottom:22px;
+
+}
+
+.event-info p{
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+    color:#516B85;
+
+    max-width:620px;
+
+}
+
+.event-details{
+
+    margin:40px 0;
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.detail{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:20px;
+
+    background:white;
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:16px;
+
+    transition:.35s;
+
+}
+
+.detail:hover{
+
+    transform:translateX(8px);
+
+    border-color:var(--sky);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+}
+
+.icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+    background:linear-gradient(
+        135deg,
+        var(--blue),
+        var(--sky)
+    );
+
+    color:white;
+
+    font-size:22px;
+
+    box-shadow:0 12px 25px rgba(27,79,145,.25);
+
+}
+
+.detail strong{
+
+    display:block;
+
+    font-size:1rem;
+
+    color:var(--navy);
+
+}
+
+.detail small{
+
+    color:#73869B;
+
+    font-size:.9rem;
+
+}
+
+.event-buttons{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+}
+
+.event-buttons i{
+
+    margin-right:8px;
+
+}
+
+
+/*======================
+     INVITACIÓN
+======================*/
+
+.event-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.invitation-card{
+
+    background:white;
+
+    padding:12px;
+
+    border-radius:22px;
+
+    transform:rotate(-4deg);
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.22);
+
+    transition:
+    transform .45s,
+    box-shadow .45s;
+
+    animation:floatCard 6s ease-in-out infinite;
+
+}
+
+.invitation-card:hover{
+
+    transform:
+    rotate(0deg)
+    scale(1.04);
+
+    box-shadow:
+    0 40px 90px rgba(0,0,0,.28);
+
+}
+
+.invitation-card img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:370px;
+
+    border-radius:14px;
+
+}
+
+
+/* efecto flotante */
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:
+        rotate(-4deg)
+        translateY(0px);
+
+    }
+
+    50%{
+
+        transform:
+        rotate(-4deg)
+        translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:
+        rotate(-4deg)
+        translateY(0px);
+
+    }
+
+}
+
+
+@media(max-width:900px){
+
+    .event-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .event-image{
+
+        order:-1;
+
+        margin-bottom:30px;
+
+    }
+
+    .event-info{
+
+        text-align:center;
+
+    }
+
+    .event-info p{
+
+        margin:auto;
+
+    }
+
+    .event-buttons{
+
+        justify-content:center;
+
+    }
+
+}
