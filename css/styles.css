@@ -930,3 +930,69 @@
     }
 
 }
+
+/*==============================
+        MODELO DE TRABAJO
+===============================*/
+
+.modelo-trabajo{
+    background: var(--paper);
+}
+
+.modelo-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+@media(max-width:800px){
+    .modelo-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.modelo-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:32px;
+    transition:.25s;
+}
+
+.modelo-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--sky);
+}
+
+.modelo-num{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--sky-light);
+    color:var(--blue);
+    font-family:'Sora';
+    font-weight:700;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.modelo-card h4{
+    margin-bottom:15px;
+}
+
+.modelo-card p{
+    color:#4b6178;
+}
+
+.modelo-card ul{
+    margin:0;
+    padding-left:20px;
+}
+
+.modelo-card li{
+    margin-bottom:14px;
+    color:#31445B;
+    line-height:1.6;
+}
